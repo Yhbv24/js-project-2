@@ -11,7 +11,7 @@ export default Ember.Component.extend({
         title: this.get("title"),
         body: this.get("body"),
         author: this.get("author")
-      }
+      };
       this.sendAction("edit", question, params);
       this.set("isShowing", false);
     },
