@@ -4,11 +4,16 @@ export default Ember.Component.extend({
   isShowing: false,
   actions: {
     delete(question) {
-      question.destroyRecord();
-      this.transitionTo("index");
+      this.sendAction("delete", question);
     },
-    edit(question, params) {
+    edit(question) {
+      var params = {
+        title: this.get("title"),
+        body: this.get("body"),
+        author: this.get("author")
+      }
       this.sendAction("edit", question, params);
+      this.set("isShowing", false);
     },
     showEditForm() {
       this.set("isShowing", true);
