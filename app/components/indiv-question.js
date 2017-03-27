@@ -1,7 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  isShowing: false,
+  isEditShowing: false,
+  isAddAnswerShowing: false,
   actions: {
     delete(question) {
       this.sendAction("delete", question);
@@ -16,10 +17,16 @@ export default Ember.Component.extend({
       this.set("isShowing", false);
     },
     showEditForm() {
-      this.set("isShowing", true);
+      this.set("isEditShowing", true);
     },
     hideEditForm() {
-      this.set("isShowing", false);
+      this.set("isEditShowing", false);
+    },
+    showAnswerForm() {
+      this.set("isAddAnswerShowing", true);
+    },
+    hideAnswerForm() {
+      this.set("isAddAnswerShowing", false);
     }
   }
 });

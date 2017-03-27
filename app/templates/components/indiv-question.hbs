@@ -10,7 +10,7 @@
       Posted by: {{question.author}}
       <button {{action "delete" question}} class="btn btn-sm">Delete</button>
 
-      {{#if isShowing}}
+      {{#if isEditShowing}}
         <div class="edit_question_form">
           <form>
             <div class="form-group">
@@ -35,6 +35,33 @@
         </div>
       {{else}}
         <button {{action "showEditForm"}} class="btn btn-sm">Edit</button>
+      {{/if}}
+
+      {{#if isAddAnswerShowing}}
+        <div class="add_answer_form">
+          <form>
+            <div class="form-group">
+              <label for="title">Title:</label>
+              {{input value=title type="text" class="form-control" placeholder=""}}
+            </div>
+
+            <div class="form-group">
+              <label for="body">Body:</label>
+              {{input value=body type="text" class="form-control" placeholder=""}}
+            </div>
+
+            <div class="form-group">
+              <label for="author">Author:</label>
+              {{input value=author type="text" class="form-control" placeholder=""}}
+            </div>
+
+            <div class="center">
+              <button {{action "addAnswer" question answer}} class="btn btn-sm">Submit</button> <button {{action "hideAnswerForm"}} class="btn btn-sm">Close</button>
+            </div>
+          </form>
+        </div>
+      {{else}}
+        <button {{action "showAnswerForm"}} class="btn btn-sm">Submit Answer</button>
       {{/if}}
 
     </div>
