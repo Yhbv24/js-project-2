@@ -2,14 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
-    isShowing: false,
-    showForm() {
-      this.set("isShowing", true);
-    },
-    hideForm() {
-      this.set("isShowing", false);
-    },
     newQuestion() {
+      var params = {
+        title: this.get("title"),
+        body: this.get("body"),
+        author: this.get("author")
+      };
+      this.sendAction("newQuestion", params);
     }
   }
 });
