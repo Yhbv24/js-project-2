@@ -1,1 +1,13 @@
-{{outlet}}
+<div class="question_tile">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      {{model.title}}
+    </div>
+    <div class="panel-body">
+        {{model.body}}
+    </div>
+    <div class="panel-footer">
+      Posted by: {{model.author}} <button {{action "delete" question}} class="btn btn-sm">Delete</button>
+    </div>
+  </div>
+</div>
