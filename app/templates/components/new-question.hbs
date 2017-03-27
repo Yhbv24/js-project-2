@@ -1,0 +1,22 @@
+<div class="new_question_form">
+  <form>
+    <div class="form-group">
+      <label for="title">Title:</label>
+      {{input value=title type="text" class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <label for="body">Body:</label>
+      {{input value=body type="text" class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <label for="author">Title:</label>
+      {{input value=author type="text" class="form-control"}}
+    </div>
+
+    <div class="center">
+      <button {{action "newQuestion"}} class="btn btn-sm">Submit</button>
+    </div>
+  </form>
+</div>
