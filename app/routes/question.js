@@ -7,6 +7,10 @@ export default Ember.Route.extend({
   actions: {
     delete(question) {
       this.sendAction("delete", question);
+    },
+    edit(question, params) {
+      question.save();
+      this.transitionTo("index");
     }
   }
 });
