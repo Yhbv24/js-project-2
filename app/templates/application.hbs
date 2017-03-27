@@ -1,5 +1,32 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<link href="https://fonts.googleapis.com/css?family=Carme" rel="stylesheet">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li>{{#link-to "index"}}Home{{/link-to}}</li>
+    </ul>
+  </div>
+</nav>
 
-{{outlet}}
+<header>
+  <div class="jumbotron">
+    <h1>Welcome to the Message Board!</h1>
+    <h4>Here, you can post questions, view questions submitted by others, have your questions answered, and answer other people's questions. Feel free to start posting!</h4>
+  </div>
+</header>
+
+<div class="container">
+  <body>
+    <div class="question-container">
+      {{outlet}}
+    </div>
+    <hr>
+  </body>
+
+  <footer>
+    <ul>
+      <li>Facebook</li>
+      <li>Twitter</li>
+      <li>Instagram</li>
+    </ul>
+  </footer>
+</div>
