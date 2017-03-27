@@ -69,7 +69,7 @@
   </div>
 
   <h3>Answer(s):</h3>
-  {{#each model.question.answers as |answer|}}
+  {{#each question.answer as |answer|}}
     {{answer-tile answer=answer}}
   {{else}}
     <p>No answers yet!</p>
