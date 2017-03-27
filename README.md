@@ -1,7 +1,50 @@
-# js-project-2
+# Message Board
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+#### By Ash Laidlaw
+
+Welcome to the Message Board. This app will allow users to post questions, and other users can submit answers to those questions.
+
+## Technologies Used
+
+* JavaScript
+* Ember JS
+* CSS & SASS
+* HTML
+* Bootstrap
+
+## Goals/Development Process
+
+The primary goals of this project are to familiarize myself with the Ember framework, and to think about how I'm going to implement my ideas before really starting the project. The following steps are a general outline of the development process:
+
+1. Create Ember project and start the server to begin Development
+2. Install Emberfire and Bootstrap
+3. Create basic site template in application.hbs
+4. Add Contact and About routes
+5. Add Firebase database and insert information into environment.js
+   * Add model for database
+   * Create JSON file to seed database
+6. Routes/Components/Templates
+   * Routes
+      * index
+      * new-question
+      * question
+
+   * Components
+      * question-tile
+      * answer-tile
+      * indiv-question
+      * new-question
+
+   * Templates
+      * index
+      * application
+      * new-question
+      * question
+7. Integrate SASS
+8. Add dynamic route to individual question
+   * From here, allow user to edit and/or delete question
+9. Add ability to leave answers for questions
+10. Display all answers to a question
 
 ## Prerequisites
 
@@ -12,41 +55,26 @@ You will need the following things properly installed on your computer.
 * [Bower](https://bower.io/)
 * [Ember CLI](https://ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
+* [SASS](http://sass-lang.com/)
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd js-project-2`
+* `git clone <https://github.com/Yhbv24/message-board>`
+* `cd message-board`
 * `npm install`
 * `bower install`
+* `ember install ember-cli-sass`
+* `bower install bootstrap --save`
+
+## Current Bugs
+
+* No bugs found
 
 ## Running / Development
 
 * `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+* Visit the app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
+## Copyright
 
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+MIT License, © Ash Laidlaw 2017
