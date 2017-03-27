@@ -1,4 +1,5 @@
 <div class="question_tile">
+  <h3>Question:</h3>
   <div class="panel panel-primary">
     <div class="panel-heading">
       {{question.title}}
@@ -56,7 +57,7 @@
             </div>
 
             <div class="center">
-              <button {{action "addAnswer" question answer}} class="btn btn-sm">Submit</button> <button {{action "hideAnswerForm"}} class="btn btn-sm">Close</button>
+              <button {{action "addAnswer"}} class="btn btn-sm">Submit</button> <button {{action "hideAnswerForm"}} class="btn btn-sm">Close</button>
             </div>
           </form>
         </div>
@@ -66,4 +67,11 @@
 
     </div>
   </div>
+
+  <h3>Answer(s):</h3>
+  {{#each model.question.answers as |answer|}}
+    {{answer-tile answer=answer}}
+  {{else}}
+    <p>No answers yet!</p>
+  {{/each}}
 </div>

@@ -16,6 +16,16 @@ export default Ember.Component.extend({
       this.sendAction("edit", question, params);
       this.set("isShowing", false);
     },
+    addAnswer() {
+      var params = {
+        title: this.get("title"),
+        body: this.get("body"),
+        author: this.get("author"),
+        question: this.get("question")
+      };
+      this.set('isAddAnswerShowing', false);
+      this.sendAction('addAnswer', params);
+    },
     showEditForm() {
       this.set("isEditShowing", true);
     },
